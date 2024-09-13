@@ -115,3 +115,4 @@ C:\Users\tvcm0\source\repos\Tarea Extraclase #2\TareaTests\obj\Debug\net8.0\refi
 C:\Users\tvcm0\source\repos\Tarea Extraclase #2\TareaTests\obj\Debug\net8.0\TareaTests.pdb
 C:\Users\tvcm0\source\repos\Tarea Extraclase #2\TareaTests\obj\Debug\net8.0\TareaTests.genruntimeconfig.cache
 C:\Users\tvcm0\source\repos\Tarea Extraclase #2\TareaTests\obj\Debug\net8.0\ref\TareaTests.dll
+C:\Users\tvcm0\source\repos\Tarea Extraclase #2\TareaTests\obj\Debug\net8.0\TareaTests.sourcelink.json

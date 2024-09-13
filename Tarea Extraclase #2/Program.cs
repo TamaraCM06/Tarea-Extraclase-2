@@ -48,6 +48,7 @@ namespace Tarea2
                 middle = nuevoNodo;
                 nodos = 0;
                 nodos = 1;
+                return;
                 
             }
             if (value < head.Dato)
@@ -62,6 +63,8 @@ namespace Tarea2
 
                 nodos += 1;
 
+                return;
+
 
             }
             if (value > last.Dato)
@@ -75,6 +78,8 @@ namespace Tarea2
                 }
 
                 nodos += 1;
+
+                return;
             }
             Nodo actual = head;
             while (actual != null && actual.Dato < value)
@@ -83,7 +88,11 @@ namespace Tarea2
             }
             nuevoNodo.Anterior = actual.Anterior;
             nuevoNodo.Siguiente = actual;
-            actual.Anterior.Siguiente = nuevoNodo;
+            if (actual.Anterior != null)
+            {
+                actual.Anterior.Siguiente = nuevoNodo;
+            }
+
             actual.Anterior = nuevoNodo;
             if ((nodos % 2) != 0)
             {
@@ -91,7 +100,7 @@ namespace Tarea2
             }
 
             nodos += 1;
-
+            Console.WriteLine(middle);
         }
         public int DeleteFirst()
         {
@@ -112,6 +121,49 @@ namespace Tarea2
                 return -1000000;
             }
             return middle.Dato;
+        }
+
+        public void Insertar(int value)  //Metodo para insertar sin orden especifico para problemas 1 y 2
+        {
+            Nodo nuevoNodo = new Nodo(value);
+
+            if (head == null)
+            {
+                head = nuevoNodo;
+                last = nuevoNodo;
+            }
+            else
+            {
+                last.Siguiente = nuevoNodo;
+                nuevoNodo.Anterior = last;
+                last = nuevoNodo;
+            }
+        }
+
+        public void Invert()
+        {
+            if ((head == null) || (last == null))
+            {
+                return;
+            }
+
+            Nodo actual = head;
+            Nodo holder = null;
+
+            while(actual != null)
+            {
+                holder = actual.Anterior;
+                actual.Anterior = actual.Siguiente;
+                actual.Siguiente = holder;
+                actual = actual.Anterior;
+            }
+
+            if (holder != null)
+            {
+                holder = head;
+                head = last;
+                last = holder;
+            }
         }
     }
     public enum SortDirection
