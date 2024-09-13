@@ -6,6 +6,68 @@ namespace TareaTests
    public class UnitTest
     {
         [TestMethod]
+        public void Problema1Ascendente()
+        {
+            ListaDoble listaA = new ListaDoble();
+
+            listaA.InsertInOrder(4);
+            listaA.InsertInOrder(5);
+            listaA.InsertInOrder(6);
+
+            ListaDoble listaB = new ListaDoble();
+
+            listaB.InsertInOrder(3);
+            listaB.InsertInOrder(1);
+            listaB.InsertInOrder(7);
+
+
+            listaA.MergeSorted(listaA, listaB, SortDirection.Asc);
+
+            Nodo actual = listaA.head;
+
+            int[] result = {1,3,4,5,6,7};
+            int i = 0;
+
+            while (actual != null)
+            {
+                Assert.AreEqual(result[i], actual.Dato);
+                actual = actual.Siguiente;
+                i++;
+            }
+
+        }
+        [TestMethod]
+        public void Problema1Descendente()
+        {
+            ListaDoble listaA = new ListaDoble();
+
+            listaA.InsertInOrder(5);
+            listaA.InsertInOrder(8);
+            listaA.InsertInOrder(4);
+
+            ListaDoble listaB = new ListaDoble();
+
+            listaB.InsertInOrder(2);
+            listaB.InsertInOrder(1);
+            listaB.InsertInOrder(3);
+
+
+            listaA.MergeSorted(listaA, listaB, SortDirection.Desc);
+
+            Nodo actual = listaA.head;
+
+            int[] result = { 8,5,4,3,2,1};
+            int i = 0;
+
+            while (actual != null)
+            {
+                Assert.AreEqual(result[i], actual.Dato);
+                actual = actual.Siguiente;
+                i++;
+            }
+
+        }
+        [TestMethod]
         public void Problema2()
         {
             ListaDoble lista = new ListaDoble();
