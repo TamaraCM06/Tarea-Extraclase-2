@@ -12,3 +12,4 @@ C:\Users\tvcm0\source\repos\Tarea Extraclase #2\Tarea Extraclase #2\obj\Debug\ne
 C:\Users\tvcm0\source\repos\Tarea Extraclase #2\Tarea Extraclase #2\obj\Debug\net8.0\Tarea Extraclase #2.pdb
 C:\Users\tvcm0\source\repos\Tarea Extraclase #2\Tarea Extraclase #2\obj\Debug\net8.0\Tarea Extraclase #2.genruntimeconfig.cache
 C:\Users\tvcm0\source\repos\Tarea Extraclase #2\Tarea Extraclase #2\obj\Debug\net8.0\ref\Tarea Extraclase #2.dll
+C:\Users\tvcm0\source\repos\Tarea Extraclase #2\Tarea Extraclase #2\obj\Debug\net8.0\Tarea Extraclase #2.sourcelink.json
