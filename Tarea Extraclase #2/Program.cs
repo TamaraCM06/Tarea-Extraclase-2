@@ -31,6 +31,7 @@ namespace Tarea2
         public Nodo? head;
         public Nodo? last;
         public Nodo? middle;
+        public int nodos;
         public ListaDoble()
         {
             head = null;
@@ -45,18 +46,35 @@ namespace Tarea2
                 head = nuevoNodo;
                 last = nuevoNodo;
                 middle = nuevoNodo;
+                nodos = 0;
+                nodos = 1;
+                
             }
             if (value < head.Dato)
             {
                 nuevoNodo.Siguiente = head;
                 head.Anterior = last;
                 head = nuevoNodo;
+                if ((nodos%2) != 0)
+                {
+                    middle = middle.Anterior;
+                }
+
+                nodos += 1;
+
+
             }
             if (value > last.Dato)
             {
                 last.Siguiente = nuevoNodo;
                 nuevoNodo.Anterior = last;
                 last = nuevoNodo;
+                if ((nodos % 2) != 0)
+                {
+                    middle = middle.Siguiente;
+                }
+
+                nodos += 1;
             }
             Nodo actual = head;
             while (actual != null && actual.Dato < value)
@@ -67,7 +85,13 @@ namespace Tarea2
             nuevoNodo.Siguiente = actual;
             actual.Anterior.Siguiente = nuevoNodo;
             actual.Anterior = nuevoNodo;
-            
+            if ((nodos % 2) != 0)
+            {
+                middle = middle.Siguiente;
+            }
+
+            nodos += 1;
+
         }
         public int DeleteFirst()
         {
@@ -83,7 +107,11 @@ namespace Tarea2
         }
         public int GetMiddle()
         {
-            return 4;
+            if (middle == null)
+            {
+                return -1000000;
+            }
+            return middle.Dato;
         }
     }
     public enum SortDirection

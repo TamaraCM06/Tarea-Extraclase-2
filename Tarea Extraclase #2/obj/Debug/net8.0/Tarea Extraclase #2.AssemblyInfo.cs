@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Tarea Extraclase #2")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+187eb7ff2236bd593c55f60cf83a2b90554ba8cb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2d94795a5b9b34c95183985c1660b2f4e3986784")]
 [assembly: System.Reflection.AssemblyProductAttribute("Tarea Extraclase #2")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Tarea Extraclase #2")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
