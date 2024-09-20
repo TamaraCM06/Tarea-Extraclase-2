@@ -54,9 +54,9 @@ namespace TareaTests
 
             listaA.MergeSorted(listaA, listaB, SortDirection.Desc);
 
-            Nodo actual = listaA.head;
+            Nodo actual = listaA.last;
 
-            int[] result = { 8,5,4,3,2,1};
+            int[] result = { 8, 5, 4, 3, 2, 1 };
             int i = 0;
 
             while (actual != null)
