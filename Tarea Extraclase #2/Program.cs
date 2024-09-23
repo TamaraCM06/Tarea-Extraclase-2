@@ -200,7 +200,6 @@ namespace Tarea2
                 last.Siguiente = nuevoNodo;
                 nuevoNodo.Anterior = last;
                 last = nuevoNodo;
-
             }
         }
 
@@ -259,14 +258,21 @@ namespace Tarea2
                         mergedList.InsertInOrder(nodoB.Dato);
                         nodoB = nodoB.Siguiente;
                     }
+                    while (nodoA != null)
+                    {
+                        mergedList.InsertInOrder(nodoA.Dato);
+                        nodoA = nodoA.Siguiente;
+                    }
+                    while (nodoB != null)
+                    {
+                        mergedList.InsertInOrder(nodoB.Dato);
+                        nodoB = nodoB.Siguiente;
+                    }
 
 
                 }
                 else
                 {
-
-                    nodoA = listAA.last;
-                    nodoB = listBB.last;
 
                     if (nodoA.Dato >= nodoB.Dato)
                     {
@@ -278,35 +284,19 @@ namespace Tarea2
                         mergedList.Insertar(nodoB.Dato);
                         nodoB = nodoB.Anterior;
                     }
+                    while (nodoA != null)
+                    {
+                        mergedList.Insertar(nodoA.Dato);
+                        nodoA = nodoA.Anterior;
+                    }
+                    while (nodoB != null)
+                    {
+                        mergedList.Insertar(nodoB.Dato);
+                        nodoB = nodoB.Anterior;
+                    }
 
                 }
             }
-            while (nodoA != null)
-            {
-                if (direction == SortDirection.Asc)
-                {
-                    mergedList.InsertInOrder(nodoA.Dato);
-                }
-                else
-                {
-                    mergedList.Insertar(nodoA.Dato);
-                }
-                nodoA = nodoA.Siguiente;
-            }
-
-            while (nodoB != null)
-            {
-                if (direction == SortDirection.Asc)
-                {
-                    mergedList.InsertInOrder(nodoB.Dato);
-                }
-                else
-                {
-                    mergedList.Insertar(nodoB.Dato);
-                }
-                nodoB = nodoB.Siguiente;
-            }
-
 
             this.head = mergedList.head;
             this.last = mergedList.last;
